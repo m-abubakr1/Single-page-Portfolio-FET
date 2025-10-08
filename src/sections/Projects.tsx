@@ -99,6 +99,7 @@ export const ProjectsSection = () => {
                 src={project.image}
                 alt={project.title}
                 className="mt-8 -mb-4"
+                suppressHydrationWarning
               />
             </div>
           ))}
