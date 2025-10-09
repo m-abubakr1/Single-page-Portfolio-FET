@@ -66,7 +66,14 @@ export const AboutSection = () => {
               digital experiences.
             </p>
           </div>
-          <div></div>
+          <div>
+            {toolboxItems.map((item) => (
+              <div key={item.title}>
+                <span>{item.icon}</span>
+                <span>{item.title}</span>
+              </div>
+            ))}
+          </div>
         </Card>
       </div>
     </div>
