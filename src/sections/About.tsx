@@ -12,6 +12,7 @@ import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import { title } from "process";
 
 const toolboxItems = [
   {
@@ -37,6 +38,33 @@ const toolboxItems = [
   {
     title: "Github",
     iconType: GithubIcon,
+  },
+];
+
+const hobbies = [
+  {
+    title: "Painting",
+    emoji: "🎨",
+  },
+  {
+    title: "Photography",
+    emoji: "📷",
+  },
+  {
+    title: "Gaming",
+    emoji: "🎮",
+  },
+  {
+    title: "Hiking",
+    emoji: "🥾",
+  },
+  {
+    title: "Music",
+    emoji: "🎵",
+  },
+  {
+    title: "Reading",
+    emoji: " 📚",
   },
 ];
 
@@ -85,6 +113,14 @@ export const AboutSection = () => {
             <StarIcon />
             <h3>Beyond the Code</h3>
             <p>Explore hobbies and interests beyond the digital realm.</p>
+          </div>
+          <div>
+            {hobbies.map((hobby) => (
+              <div key={hobby.title}>
+                <span>{hobby.emoji}</span>
+                <span>{hobby.title}</span>
+              </div>
+            ))}
           </div>
         </Card>
         <Card>
